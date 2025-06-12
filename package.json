@@ -1,0 +1,147 @@
+{
+  "name": "file-snapshots",
+  "displayName": "File Snapshots",
+  "description": "A VS Code extension for creating and managing file snapshots",
+  "version": "0.0.1",
+  "publisher": "Morxander",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Morxander/file-snapshots.git"
+  },
+  "keywords": [
+    "snapshot",
+    "backup",
+    "file",
+    "version",
+    "history",
+    "git",
+    "save",
+    "restore"
+  ],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "file-snapshots.helloWorld",
+        "title": "Hello World",
+        "category": "File Snapshots"
+      },
+      {
+        "command": "file-snapshots.takeSnapshot",
+        "title": "Take a snapshot",
+        "category": "File Snapshots"
+      },
+      {
+        "command": "file-snapshots.refreshSnapshots",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "file-snapshots.openSnapshot",
+        "title": "Open Snapshot"
+      },
+      {
+        "command": "file-snapshots.diffSnapshot",
+        "title": "Compare with Current",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "file-snapshots.restoreSnapshot",
+        "title": "Restore Snapshot",
+        "icon": "$(history)"
+      },
+      {
+        "command": "file-snapshots.deleteSnapshot",
+        "title": "Delete Snapshot",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "file-snapshots.exportSnapshot",
+        "title": "Export Snapshot",
+        "icon": "$(save)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "file-snapshots.takeSnapshot",
+          "when": "!explorerResourceIsFolder",
+          "group": "7_modification"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "file-snapshots.refreshSnapshots",
+          "when": "view == fileSnapshots",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "file-snapshots.diffSnapshot",
+          "when": "view == fileSnapshots && viewItem == file",
+          "group": "inline"
+        },
+        {
+          "command": "file-snapshots.restoreSnapshot",
+          "when": "view == fileSnapshots && viewItem == file",
+          "group": "inline"
+        },
+        {
+          "command": "file-snapshots.deleteSnapshot",
+          "when": "view == fileSnapshots && viewItem == snapshot",
+          "group": "inline"
+        },
+        {
+          "command": "file-snapshots.exportSnapshot",
+          "when": "view == fileSnapshots && viewItem == file",
+          "group": "inline"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "fileSnapshots",
+          "name": "File Snapshots",
+          "when": "workspaceFolderCount > 0"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "fileSnapshots",
+        "contents": "No snapshots found.\n[Take a snapshot](command:file-snapshots.takeSnapshot)\nRight-click on any file to create your first snapshot."
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.4"
+  }
+} 
