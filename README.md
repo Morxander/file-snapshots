@@ -1,16 +1,27 @@
 # 📸 File Snapshots
 
+![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![VS Code Engine](https://img.shields.io/badge/vscode-^1.74.0-007ACC.svg)
+![AI Crafted](https://img.shields.io/badge/🤖_AI-Crafted-purple.svg)
+
 A VS Code extension for creating and managing file snapshots with ease.
+
+## 🎯 What is File Snapshots?
+
+File Snapshots allows you to quickly capture and manage different states of your files directly within VS Code. Whether you're experimenting with code, refactoring, or just want to save a "working version" before making changes, this extension has you covered.
+
+## 🎬 Demo
+
+![File Snapshots Demo](demo.gif)
+
+*See File Snapshots in action - create, compare, restore, and export file snapshots with ease!*
 
 ## 🤖 Fun Facts
 
 - **100% AI-Crafted**: This entire extension was brought to life by artificial intelligence. No humans were harmed in the making of this plugin (though several cups of coffee were consumed by the human supervisor).
 
 - **We Know Git Exists**: Before you ask - yes, we're fully aware that Git is a thing, and this plugin isn't trying to replace your beloved version control system. Think of File Snapshots as Git's quirky little cousin who specializes in quick, lightweight snapshots for those "just in case" moments. Perfect for when you want to save a state without the ceremony of a full commit!
-
-## 🎯 What is File Snapshots?
-
-File Snapshots allows you to quickly capture and manage different states of your files directly within VS Code. Whether you're experimenting with code, refactoring, or just want to save a "working version" before making changes, this extension has you covered.
 
 ## ✨ Features
 
