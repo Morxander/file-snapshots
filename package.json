@@ -2,7 +2,7 @@
   "name": "file-snapshots",
   "displayName": "File Snapshots",
   "description": "A VS Code extension for creating and managing file snapshots",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Morxander",
   "license": "MIT",
   "icon": "icon.png",
@@ -34,11 +34,6 @@
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "file-snapshots.helloWorld",
-        "title": "Hello World",
-        "category": "File Snapshots"
-      },
       {
         "command": "file-snapshots.takeSnapshot",
         "title": "Take a snapshot",

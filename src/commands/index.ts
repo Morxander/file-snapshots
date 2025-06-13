@@ -5,9 +5,7 @@ import { SnapshotTreeProvider } from '../SnapshotTreeProvider';
 // Export individual command handlers
 export { takeSnapshotCommand } from './takeSnapshot';
 export { openSnapshotCommand } from './openSnapshot';
-export { refreshSnapshotsCommand } from './refreshSnapshots';
 export { deleteSnapshotCommand } from './deleteSnapshot';
-export { diffSnapshotCommand } from './diffSnapshot';
 export { restoreSnapshotCommand } from './restoreSnapshot';
 export { exportSnapshotCommand } from './exportSnapshot';
 
@@ -26,13 +24,6 @@ export function registerCommands(
 	treeProvider: SnapshotTreeProvider
 ): vscode.Disposable[] {
 	const disposables: vscode.Disposable[] = [];
-
-	// Hello World command (can be removed in production)
-	disposables.push(
-		vscode.commands.registerCommand('file-snapshots.helloWorld', () => {
-			vscode.window.showInformationMessage('Hello World from File Snapshots!');
-		})
-	);
 
 	// Take snapshot command
 	disposables.push(

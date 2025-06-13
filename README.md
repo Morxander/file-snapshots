@@ -1,6 +1,7 @@
 # 📸 File Snapshots
 
-![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
+[![VS Code Marketplace](https://img.shields.io/vscode-marketplace/v/Morxander.file-snapshots.svg)](https://marketplace.visualstudio.com/items?itemName=Morxander.file-snapshots)
+[![Installs](https://img.shields.io/vscode-marketplace/i/Morxander.file-snapshots.svg)](https://marketplace.visualstudio.com/items?itemName=Morxander.file-snapshots)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![VS Code Engine](https://img.shields.io/badge/vscode-^1.74.0-007ACC.svg)
 ![AI Crafted](https://img.shields.io/badge/🤖_AI-Crafted-purple.svg)
